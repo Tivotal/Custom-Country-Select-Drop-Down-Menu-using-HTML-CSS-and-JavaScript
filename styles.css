@@ -1,0 +1,156 @@
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1b1b1b;
+}
+
+::selection {
+  background: #222;
+  color: #fff;
+}
+
+.wrapper {
+  width: 550px;
+  margin: 85px auto 0;
+}
+
+.wrapper .btn {
+  height: 65px;
+  padding: 0 60px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.wrapper .btn span {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 85%;
+}
+
+.wrapper .btn i {
+  font-size: 31px;
+  color: #222;
+  transition: 0.5s linear;
+}
+
+.wrapper.active .btn i {
+  transform: rotate(-180deg);
+}
+
+.wrapper .content {
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+  padding: 0 20px;
+  margin-top: 20px;
+  border-radius: 7px;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.wrapper.active .content {
+  height: 350px;
+}
+
+.wrapper .content .search {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.content .search input {
+  height: 50px;
+  width: 100%;
+  font-size: 17px;
+  padding: 0 20px 0 43px;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+}
+
+.search input::placeholder {
+  color: #bfbfbf;
+}
+
+.search input:focus {
+  padding-left: 42px;
+  border: 2px solid #222;
+}
+
+.content .search i {
+  font-size: 20px;
+  color: #999;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.content ul {
+  max-height: 250px;
+  margin-top: 10px;
+  padding-right: 7px;
+  overflow-y: auto;
+}
+
+ul::-webkit-scrollbar {
+  width: 7px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 25px;
+}
+
+ul li {
+  height: 50px;
+  padding: 0 13px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+ul li:hover {
+  background: #f2f2f2;
+}
+
+ul li.hide {
+  display: none;
+}
+
+.btn span > *:nth-child(1),
+ul li .iconify {
+  filter: drop-shadow(0px 0px 2px #222);
+}
